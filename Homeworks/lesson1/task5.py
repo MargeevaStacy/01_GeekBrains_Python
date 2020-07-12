@@ -12,3 +12,4 @@ if revenue > costs:
     print(f'Прибыль на 1 сотрудника составляет: {profit_per_employee:,}')
 else:
     print(f'К сожалению, ваше предприятие убыточно. Размер убытка: {profit:,}')
+
