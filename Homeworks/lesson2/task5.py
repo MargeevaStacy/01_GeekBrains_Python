@@ -20,3 +20,8 @@ for el in my_list:
     else:
         i += 1
 print(my_list)
+
+"""Решение преподавателя
+
+"""
+

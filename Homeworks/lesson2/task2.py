@@ -11,3 +11,15 @@ for el in user_answer:
         user_answer[i], user_answer[i + 1] = user_answer[i + 1], user_answer[i]
         i += 2
 print(f'Измененный список: {user_answer}')
+
+"""Решение преподавателя
+
+user_answer = input('введите элементы черзе запятую')
+user_list = user_answer.split(',')
+
+idx = 0
+while idx < len(user_list[:-1]):
+    user_list[idx], user_list[idx + 1] = user_list[idx + 1], user_list[idx]
+    idx += 2
+print(user_list)
+"""
