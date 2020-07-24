@@ -8,7 +8,7 @@ def my_func2(v1: int, v2: int, v3: int) -> int:
     """Функция, принимающая 3 позиционных аргумента и считающая сумму двух наибольших аргументов."""
     init_list = [v1, v2, v3]
     init_list.sort(reverse=True)
-    sum_v = init_list[0] + init_list[1]
+    sum_v = init_list[0] + init_list[1]    # sum(sorted(init_list )[:2])
     return sum_v
 
 
@@ -64,3 +64,24 @@ print(my_func4(5, 23, 45))
 print(my_func(23, 11, 48))
 print(my_func(124, 345, 11))
 print(my_func(5, 23, 45))
+
+
+"""Решение преподавателя
+
+def my_func(a, b, c):
+    return max(a + b, b + c, c + a)
+
+
+# можно lambda
+my_func2 = lambda a, b, c: max(a + b, b + c, c + a)
+
+assert my_func(1, 2, 3) == 5, 'my_func(1, 2, 3)'
+assert my_func(2, 7, 0) == 9, 'my_func(2, 7, 0)'
+assert my_func(5, 9, 22) == 31, 'my_func(5, 9, 22)'
+assert my_func(-22, 3, 7) == 10, 'my_func(-22, 3, 7)'
+
+assert my_func2(1, 2, 3) == 5, 'my_func2(1, 2, 3)'
+assert my_func2(2, 7, 0) == 9, 'my_func2(2, 7, 0)'
+assert my_func2(5, 9, 22) == 31, 'my_func2(5, 9, 22)'
+assert my_func2(-22, 3, 7) == 10, 'my_func2(-22, 3, 7)'
+"""
