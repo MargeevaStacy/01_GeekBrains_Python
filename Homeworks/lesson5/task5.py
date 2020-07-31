@@ -29,15 +29,19 @@ to_file_numbers = [random.randint(1, 200) for _ in range(random.randint(10, 250)
 print(sum(to_file_numbers))
 
 with open(file_path, 'w', encoding='UTF-8') as file:
-    to_file_str = ' '.join(map(str, to_file_numbers))
+    to_file_str = ' '.join(map(str, to_file_numbers)) # Map используется, т.к. нельзя join с int, только списки строк
     file.write(to_file_str)
 
 with open(file_path, 'r', encoding='UTF-8') as file:
-    numbers = map(int, file.read().split(' '))
+    numbers = map(int, file.read().split(' ')) # В результате мы получаем список цифр
+                                               # Map int, т.к. любой read ил файла - это str
 
 print(sum(numbers))
 print(sum(numbers))
 
+# assert sum(to_file_numbers) == sum(numbers), 'Сработал ASSERT' # Assert сработает в случае, если утверждение false
+# Assert сработает, так как утверждение false
+# Map object - генератор, один раз прочитав объект, второй раз он не дает данные, он возвращает пустой список.
+# Повторно вытащить данные из генератора нельзя! Если он завершился, то всегда после этого будет возвращать пустоту.
 
-# assert sum(to_file_numbers) == sum(numbers), 'Сработал ASSERT'
 """
