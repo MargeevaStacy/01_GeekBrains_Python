@@ -28,3 +28,21 @@ for lines in text:
     sum_hours = sum([int(el) for el in list(hours) if el.isdigit()])
     courses_dict[course] = sum_hours
 print(courses_dict)
+
+"""Решение преподавателя
+
+import os
+db = os.path.join(os.path.dirname(__file__), 'task6')
+db_dict = {}
+with open(db, 'r') as file:
+    for line in file:
+        tmp = line.split(' ')
+        name = tmp[0].replace(':', '')
+        db_dict[name] = tmp[1:]
+
+result = {}
+for key, value in db_dict.items():
+    result[key] = sum([int(itm.split('(')[0]) for itm in value if itm.split('(')[0].isdigit()])
+print(result)
+
+"""
