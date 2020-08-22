@@ -1,2 +1,2 @@
-# python_basics_09_07_2020
-GeekBrain educational course on Python Basics (July 2020)
+# 01_GeekBrains_Python
+GeekBrains educational course on Python Basics (July 2020)
